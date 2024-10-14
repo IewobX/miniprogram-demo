@@ -1,0 +1,12 @@
+<!--components/popup-list.wxml-->
+<van-popup show="{{ show }}" position="bottom" round close-on-click-overlay="{{ true }}">
+    <van-picker 
+        columns="{{ list }}" 
+        default-index="{{ defaultIndex }}"
+        bind:change="onChange" 
+        show-toolbar 
+        title="{{ title }}"
+        bind:cancel="onCancel"
+        bind:confirm="onConfirm"
+    ></van-picker>
+</van-popup>

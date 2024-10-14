@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "van-toast": "@vant/weapp/toast/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-button": "@vant/weapp/button/index",
+        "popup-list": "/components/popup-list/popup-list"
+    },
+    "navigationBarTitleText": "违法行为处理办法查询"
+}

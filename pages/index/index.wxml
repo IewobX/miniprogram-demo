@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view>
+    <van-field
+        value="{{ personnelCategoryValue }}"
+        label="人员类别："
+        border="{{ false }}"
+        readonly
+        bind:click-input="showPersonnelCategory"
+    >
+    </van-field>
+    <van-field
+        value="{{ illegalBehaviorValue }}"
+        label="违法行为："
+        border="{{ false }}"
+        readonly
+        bind:click-input="showIllegalBehavior"
+    >
+    </van-field>
+
+    <view class="button">
+        <van-button block type="primary" bind:click="search" round>查 询</van-button>
+    </view>
+
+    <van-cell-group wx:if="{{ searchResult.length }}">
+        <van-cell wx:for="{{ searchResult }}" wx:key="index" title="{{ item.title }}" value="{{ item.value }}" />
+    </van-cell-group>
+
+    <popup-list
+        wx:if="{{ showPopup }}"
+        show="{{ showPopup }}"
+        list="{{ selectList }}"
+        title="{{ popupTitle }}"
+        selectedValue="{{ popupSelectValue }}"
+        bind:onCancel="popupCancelHandler"
+        bind:onConfirm="popupConfirmHandler"
+    >
+    </popup-list>
+    <van-toast id="van-toast" />
+</view>
