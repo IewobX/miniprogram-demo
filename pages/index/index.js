@@ -30,6 +30,7 @@ Page({
         this.data.popupType = PERSONNEL_CATEGORY
         this.setData({
             showPopup: true,
+            popupTitle: '选择人员类别',
             popupSelectValue: this.data.personnelCategoryValue,
             selectList: PERSONNEL_CATEGORY_LIST,
         })
@@ -39,6 +40,7 @@ Page({
         this.data.popupType = ILLEGAL_BEHAVIOR
         this.setData({
             showPopup: true,
+            popupTitle: '选择违法行为',
             popupSelectValue: this.data.illegalBehaviorValue,
             selectList: ILLEGAL_BEHAVIOR_LIST,
         })
@@ -72,12 +74,10 @@ Page({
     search() {
         const {personnelCategoryValue, illegalBehaviorValue} = this.data;
         if(!personnelCategoryValue) {
-            // Notify({ type: 'danger', message: '请选择人员类别', duration: 1000});
             Toast('请选择人员类别');
             return;
         }
         if(!illegalBehaviorValue) {
-            // Notify({ type: 'danger', message: '请选择违法行为', duration: 1000});
             Toast('请选择违法行为');
             return;
         }

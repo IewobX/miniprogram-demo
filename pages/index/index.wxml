@@ -21,7 +21,7 @@
         <van-button block type="primary" bind:click="search" round>查 询</van-button>
     </view>
 
-    <van-cell-group wx:if="{{ searchResult.length }}">
+    <van-cell-group wx:if="{{ searchResult.length }}" title="查询结果">
         <van-cell wx:for="{{ searchResult }}" wx:key="index" title="{{ item.title }}" value="{{ item.value }}" />
     </van-cell-group>
 
@@ -35,5 +35,6 @@
         bind:onConfirm="popupConfirmHandler"
     >
     </popup-list>
+
     <van-toast id="van-toast" />
 </view>

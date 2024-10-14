@@ -7,5 +7,6 @@
         "van-button": "@vant/weapp/button/index",
         "popup-list": "/components/popup-list/popup-list"
     },
-    "navigationBarTitleText": "违法行为处理办法查询"
+    "navigationBarTitleText": "违法行为处理办法查询",
+    "backgroundColor": "#ffffff"
 }
